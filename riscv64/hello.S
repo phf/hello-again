@@ -8,7 +8,7 @@ _start:
 	ecall			# syscall
 
 	li	a0, 0		# status
-	li	a7, 93		# sys_exit_group
+	li	a7, 94		# sys_exit_group
 	ecall			# syscall
 hello:
 	.string	"hello, world\n"
