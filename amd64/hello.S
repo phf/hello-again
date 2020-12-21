@@ -2,8 +2,8 @@
 	.globl	_start
 _start:
 	mov	$1, %eax	# 1 = sys_write
-	mov	$1, %edi	# STDOUT_FILENO
-	lea	msg(%rip), %esi	# address of buffer
+	mov	%eax, %edi	# STDOUT_FILENO (mov register < mov literal)
+	lea	msg(%rip), %esi	# address of buffer (relative < absolute)
 	mov	$len, %edx	# length of buffer
 	syscall
 
