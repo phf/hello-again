@@ -8,7 +8,7 @@ _start:
 	svc	0		# syscall
 
 	lghi	%r1, 248	# 248 = sys_exit_group
-	lghi	%r2, 42		# exit status 0
+	lghi	%r2, 0		# exit status 0
 	svc	0		# syscall
 msg:
 	.ascii	"hello, world\n"
